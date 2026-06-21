@@ -10,7 +10,9 @@ steps=15,30 # 15-30
 # Define SOC version list
 soc_versions=("min")
 
-uv venv -p 3.10.17 --clear
+if [ ! -d ".venv" ] || [ ! -f ".venv/bin/activate" ]; then
+    uv venv -p 3.10.17
+fi
 source .venv/bin/activate
 uv sync
 
