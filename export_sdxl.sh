@@ -10,6 +10,16 @@ steps=15,30 # 15-30
 # Define SOC version list
 soc_versions=("min")
 
+export UV_PYTHON_INSTALL_DIR=/content/drive/MyDrive/SDXL/.python
+
+# Safe check for broken virtualenv interpreter link (avoids os error 39 crash on GDrive)
+if [ -d ".venv" ]; then
+    if ! .venv/bin/python -c "import sys" 2>/dev/null; then
+        echo "Virtual environment has broken interpreter link. Removing safely..."
+        rm -rf .venv
+    fi
+fi
+
 if [ ! -d ".venv" ] || [ ! -f ".venv/bin/activate" ]; then
     uv venv -p 3.10.17
 fi
