@@ -31,7 +31,7 @@ export LD_LIBRARY_PATH=~/qnn:$LD_LIBRARY_PATH
 
 current_pwd=$(pwd)
 
-QNN_SDK_ROOT=/data/qairt/2.28.0.241029
+QNN_SDK_ROOT=/content/drive/MyDrive/SDXL/qairt/2.28.0.241029
 cd $QNN_SDK_ROOT/bin
 source envsetup.sh
 
