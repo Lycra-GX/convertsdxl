@@ -1,6 +1,6 @@
 set -e
 
-model_path=~/Downloads/anythingxl.safetensors # Path to your model
+model_path=/content/drive/MyDrive/SDXL/models/anythingxl.safetensors # Path to your model
 model_name=anythingxl # Name used for output files
 realistic=false  # Set to true to enable --realistic mode. It will use prompts for realistic images.
 scheduler=dpm # dpm lcm eulera
